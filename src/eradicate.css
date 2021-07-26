@@ -193,6 +193,7 @@ div.ego_column,
 
 /* New Facebook (2020) */
 html:not([data-nfe-enabled='false']) div[role='feed'],
+html:not([data-nfe-enabled='false']) div[data-pagelet='MainFeed'],
 div[aria-label='Stories'] {
 	position: absolute !important;
 	opacity: 0 !important;
@@ -231,13 +232,13 @@ html:not([data-nfe-enabled='false']) #SHORTCUT_FOCUSABLE_DIV > :not([class^=Subr
 	pointer-events: none !important;
 	height: 0 !important;
 }
- 
+
 /* Reddit old */
 html:not([data-nfe-enabled='false']) .listing-page.with-listing-chooser .content #siteTable {
 	opacity: 0 !important;
 	pointer-events: none !important;
 	height: 0 !important;
-} 
+}
 
 /* Hacker News */
 html:not([data-nfe-enabled='false']) table#hnmain .itemlist {

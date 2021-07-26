@@ -4,7 +4,7 @@ export const Sites: Record<SiteId, Site> = {
 	facebook: {
 		label: 'Facebook',
 		domain: 'facebook.com',
-		paths: ['/', '/home.php'],
+		paths: ['/', '/home.php', '/watch', '/marketplace/', '/groups/feed/'],
 		origins: [
 			'http://www.facebook.com/*',
 			'https://www.facebook.com/*',

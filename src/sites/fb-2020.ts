@@ -16,15 +16,20 @@ export function eradicate(store: Store) {
 		// Don't do anything if the FB UI hasn't loaded yet
 		const feed = document.querySelector('[role=feed]');
 
-		if (feed == null) {
-			return;
+		if (feed) {
+			const container = feed.parentNode;
+
+			// Add News Feed Eradicator quote/info panel
+			if (container && !isAlreadyInjected()) {
+				injectUI(container, store);
+			}
 		}
 
-		const container = feed.parentNode;
+		const otherFeeds = document.querySelector("div[data-pagelet='MainFeed']");
 
-		// Add News Feed Eradicator quote/info panel
-		if (container && !isAlreadyInjected()) {
-			injectUI(container, store);
+		if (otherFeeds && !isAlreadyInjected) {
+			console.log('GOT HEREIFJAESIoFJEAS;ioFJEASIo;FJEAS;IOFJEAS;ioFJASE;lIFJASEi;L')
+			injectUI(otherFeeds, store);
 		}
 	}
 
